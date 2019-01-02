@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+       <xs:element name="ListOfDesignTemplatesRS">
+              <xs:complexType>
+                     <xs:sequence>
+                            <xs:element name="Ack" type="xs:string"></xs:element>
+                            <xs:element name="TotalNoOfDesignTemplates" type="xs:int" minOccurs="0" maxOccurs="1" default="null"></xs:element>
+                            <xs:element name="DesignTemplates">
+                                   <xs:complexType>
+                                          <xs:sequence>
+                                                 <xs:element name="DesignTemplate" minOccurs="0" maxOccurs="unbounded">
+                                                        <xs:complexType>
+                                                               <xs:sequence>
+								      <xs:element name="Id" type="xs:int" minOccurs="0" maxOccurs="1" default="null"></xs:element>
+                                                                      <xs:element name="Name" type="xs:string" minOccurs="0" maxOccurs="1"></xs:element>
+								     <xs:element name="sampledesign" type="xs:string" minOccurs="0" maxOccurs="1"></xs:element>
+				<xs:element name="Categories">
+                                   <xs:complexType>
+                                          <xs:sequence>
+                                                                      <xs:element name="category" minOccurs="0" maxOccurs="unbounded">
+  							<xs:complexType>
+                                                               <xs:sequence>
+								      <xs:element name="categoryId" type="xs:int" minOccurs="0" maxOccurs="1" default="null"></xs:element>
+                                                                      <xs:element name="categoryName" type="xs:string" minOccurs="0" maxOccurs="1"></xs:element>
+								      <xs:element name="headerURL" type="xs:string" minOccurs="0" maxOccurs="1"></xs:element>
+									<xs:element name="footerURL" type="xs:string" minOccurs="0" maxOccurs="1"></xs:element>
+						</xs:sequence>
+						
+                                                           </xs:complexType>
+                                                    </xs:element>    
+						  </xs:sequence>
+						
+                                                           </xs:complexType>
+                                                    </xs:element>                                 
+                                                                     
+						</xs:sequence>
+						
+                                                           </xs:complexType>
+                                                    </xs:element>
+                                             </xs:sequence>
+                                      </xs:complexType>
+                               </xs:element>
+				 <xs:element name="Errors" type="ErrorsType" minOccurs="0" maxOccurs="1"></xs:element>
+                        </xs:sequence>
+                     <xs:attribute name="TimeStamp" type="xs:string"></xs:attribute>
+                 </xs:complexType>
+          </xs:element>
+   </xs:schema>

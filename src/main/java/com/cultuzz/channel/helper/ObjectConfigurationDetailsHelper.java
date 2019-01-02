@@ -1,0 +1,11 @@
+package com.cultuzz.channel.helper;
+
+import com.cultuzz.channel.XMLpojo.ObjectConfigurationDetailsRQ;
+import com.cultuzz.channel.XMLpojo.ObjectConfigurationDetailsRS;
+
+public interface ObjectConfigurationDetailsHelper {
+	
+	public ObjectConfigurationDetailsRS processObjectConfigurationDetailsRq(ObjectConfigurationDetailsRQ objectConfigurationDetailsRq);
+	public ObjectConfigurationDetailsRS validateObjectConfigurationDetailsRq(ObjectConfigurationDetailsRQ objectConfigurationDetailsRq);
+
+}

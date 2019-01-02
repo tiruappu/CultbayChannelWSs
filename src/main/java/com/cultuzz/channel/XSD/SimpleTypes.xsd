@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<xs:schema version="1.0"
+            xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+            xmlns:jaxb="http://java.sun.com/xml/ns/jaxb" 
+            xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc" 
+            jaxb:extensionBindingPrefixes="xjc" 
+            jaxb:version="2.0" 
+            elementFormDefault="qualified">
+    <xs:simpleType name="SuccessType">
+        <xs:restriction base="xs:string"/>
+    </xs:simpleType>
+    <xs:simpleType name="czIdType">
+        <xs:restriction base="xs:string">
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="CDATAString">
+        <xs:annotation>
+            <xs:appinfo>
+                <xjc:javaType name = "java.lang.String" adapter="JaxbCDATAAdapter"/>
+            </xs:appinfo>
+        </xs:annotation>
+        <xs:restriction base="xs:string"></xs:restriction>
+    </xs:simpleType>   
+    
+    <xs:simpleType name="DateType">
+        <xs:annotation>
+            <xs:appinfo>
+                <xjc:javaType name = "java.util.Date" adapter="DateTypeAdapter"/>
+            </xs:appinfo>
+        </xs:annotation>
+        <xs:restriction base="xs:date"></xs:restriction>
+    </xs:simpleType> 
+    
+    <xs:simpleType name="myboolean">
+        <xs:annotation>
+            <xs:appinfo>
+                <xjc:javaType name="java.lang.Boolean" adapter="JaxbBooleanAdapter"/>
+                <!--jaxb:javaType name="java.lang.Boolean" parseMethod="JaxbBooleanAdapter.unmarshal" printMethod="JaxbBooleanAdapter.marshal"/-->
+            </xs:appinfo>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="True"/>
+            <xs:enumeration value="true"/>
+            <xs:enumeration value="False"/>
+            <xs:enumeration value="false"/>
+            <xs:enumeration value="1"/>
+            <xs:enumeration value="0"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+</xs:schema>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+          <!-- XML Schema Generated from XML Document on Mon Jan 02 2017 11:49:41 GMT+0530 (IST) -->
+          <!-- with XmlGrid.net Free Online Service http://xmlgrid.net -->
+       <xs:element name="ListOfVouchersRS">
+              <xs:complexType>
+                     <xs:sequence>
+                            <xs:element name="Ack" type="xs:string"></xs:element>
+			     <xs:element name="ObjectId" type="xs:int" minOccurs="0"  maxOccurs="1"></xs:element>
+			    <xs:element name="TotalVouchers" type="xs:int" minOccurs="0"  maxOccurs="1" default="null"></xs:element>
+                            <xs:element name="Vouchers" minOccurs="0"  maxOccurs="1">
+                                   <xs:complexType>
+                                          <xs:sequence>
+                                                 <xs:element name="Voucher" minOccurs="0" maxOccurs="unbounded">
+                                                        <xs:complexType>
+                                                               <xs:sequence>
+            				<xs:element name="ItemId" type="xs:string" minOccurs="0"  maxOccurs="1"></xs:element>   
+					<xs:element name="VoucherId" type="xs:string" minOccurs="0"  maxOccurs="1"></xs:element>	
+		      			<xs:element name="OrderId" type="xs:string" minOccurs="0"  maxOccurs="1"></xs:element>
+					<xs:element name="OfferSiteId" type="xs:string" default="null" minOccurs="0"  maxOccurs="1"></xs:element>
+                                        <xs:element name="Status" type="xs:int" default="null" minOccurs="0"  maxOccurs="1"></xs:element>
+					<xs:element name="BuyerId" type="xs:string" minOccurs="0"  maxOccurs="1"></xs:element>
+                                    	<xs:element name="BuyerName" type="xs:string" minOccurs="0"  maxOccurs="1"></xs:element>
+                            		<xs:element name="PaymentDate" type="xs:string" minOccurs="0"  maxOccurs="1"></xs:element>
+                                        <xs:element name="RedeemedDate" type="xs:string" minOccurs="0"  maxOccurs="1"></xs:element>
+                                        <xs:element name="CancelledDate" type="xs:string" minOccurs="0"  maxOccurs="1"></xs:element>
+                                        <xs:element name="ValidUntil" type="xs:string" minOccurs="0"  maxOccurs="1"></xs:element>
+					<xs:element name="CheckIn" type="xs:string" minOccurs="0"  maxOccurs="1"></xs:element>
+					<xs:element name="CheckOut" type="xs:string" minOccurs="0"  maxOccurs="1"></xs:element>
+                                        <xs:element name="Price" type="xs:string" minOccurs="0"  maxOccurs="1"></xs:element>
+					<xs:element name="Currency" type="xs:string" minOccurs="0"  maxOccurs="1"></xs:element>
+					<xs:element name="ProductOffer" type="xs:string" minOccurs="0" maxOccurs="1"></xs:element>
+                                                                  </xs:sequence>
+                                                               
+                                                           </xs:complexType>
+                                                    </xs:element>
+                                             </xs:sequence>
+                                      </xs:complexType>
+                               </xs:element>
+                            <xs:element name="Errors" type="ErrorsType" minOccurs="0" maxOccurs="1">
+                               </xs:element>
+                        </xs:sequence>
+			<xs:attribute name="TimeStamp" type="xs:string"></xs:attribute>
+                 </xs:complexType>
+          </xs:element>
+   </xs:schema>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+	<statusListener class="ch.qos.logback.core.status.OnConsoleStatusListener" />
+	<appender name="APP-LOG" class="ch.qos.logback.classic.sift.SiftingAppender">
+		<discriminator
+			class="ch.qos.logback.classic.sift.JNDIBasedContextDiscriminator">
+			<defaultValue>default</defaultValue>
+		</discriminator>
+		<sift>
+			<appender name="FILE-${contextName}"
+				class="ch.qos.logback.core.rolling.RollingFileAppender">
+				<encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+					<pattern>%d{dd MMM yyyy HH:mm:ss z} %-5p [%t]
+						%-17c{3} -- %m%n</pattern>
+				</encoder>
+				<!--   <file>/www/htdocs/CultbayChannelWSs_logs/${contextName}.log</file>-->
+				<file>/www/htdocs/CultbayChannelWSs_logs/${contextName}.log</file>
+				<rollingPolicy
+					class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
+					<fileNamePattern>/www/htdocs/CultbayChannelWSs_logs/${contextName}.%d{dd
+						MMM yyyy}.%i.log
+					</fileNamePattern>
+					<minIndex>1</minIndex>
+					<maxIndex>40</maxIndex>
+				</rollingPolicy>
+				<triggeringPolicy
+					class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
+					<maxFileSize>20MB</maxFileSize>
+				</triggeringPolicy>
+
+
+			</appender>
+		</sift>
+	</appender>
+
+	<!-- <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender"> -->
+	<!-- encoders are assigned the type ch.qos.logback.classic.encoder.PatternLayoutEncoder -->
+	<!-- by default -->
+	<!-- <encoder> -->
+	<!-- <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{5} - %msg%n -->
+	<!-- </pattern> -->
+	<!-- </encoder> -->
+	<!-- </appender> -->
+	<root level="DEBUG">
+		<appender-ref ref="APP-LOG" />
+		<!-- <appender-ref ref="STDOUT" /> -->
+	</root>
+
+</configuration>
+

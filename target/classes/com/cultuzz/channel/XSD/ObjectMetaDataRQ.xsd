@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+          <!-- XML Schema Generated from XML Document on Fri Nov 11 2016 11:31:41 GMT+0530 (IST) -->
+          <!-- with XmlGrid.net Free Online Service http://xmlgrid.net -->
+       <xs:element name="ObjectMetaDataRQ">
+              <xs:complexType>
+                     <xs:choice>
+                            <xs:element name="AuthenticationCode" type="xs:string" minOccurs="1"  maxOccurs="1"></xs:element>
+                            <xs:element name="SourceId" type="xs:int" minOccurs="1"  maxOccurs="1"></xs:element>
+                            <xs:element name="ChannelId" type="xs:int" minOccurs="1"  maxOccurs="1"></xs:element>
+                            <xs:element name="ObjectId" type="xs:int" minOccurs="1" maxOccurs="1"></xs:element>
+	        	    <xs:element name="ErrorLang" type="xs:string" minOccurs="1" maxOccurs="1"></xs:element>
+			    <xs:element name="RequestParameters" type="xs:string" minOccurs="1" maxOccurs="1"></xs:element>
+                            <xs:element name="SiteId" type="xs:int" minOccurs="0" maxOccurs="1" default="null"></xs:element>
+			    <xs:element name="ShopObjectId" type="xs:long" minOccurs="0" maxOccurs="1"></xs:element>
+                        </xs:choice>
+                     <xs:attribute name="TimeStamp" type="xs:string" use="required"></xs:attribute>
+                 </xs:complexType>
+          </xs:element>
+   </xs:schema>
+
+

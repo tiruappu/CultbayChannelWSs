@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+   <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+         <!-- XML Schema Generated from XML Document on Mon Mar 13 2017 15:47:44 GMT+0530 (IST) -->
+         <!-- with XmlGrid.net Free Online Service http://xmlgrid.net -->
+         <xs:element name="RepushLiveOffersRQ">
+               <xs:complexType>
+                     <xs:sequence>
+                           <xs:element name="AuthenticationCode" type="xs:string"></xs:element>
+                           <xs:element name="SourceId" type="xs:int"></xs:element>
+                           <xs:element name="ChannelId" type="xs:int"></xs:element>
+                           <xs:element name="ObjectId" type="xs:int"></xs:element>
+                           <xs:element name="ErrorLang" type="xs:string"></xs:element>
+                           <xs:element name="TemplateId" type="xs:int"></xs:element> <!-- Compulsary Element -->
+                           <xs:element name="Title" type="xs:boolean"></xs:element>   <!-- Optional feilds -->
+                           <xs:element name="SubTitle" type="xs:boolean"></xs:element> <!-- Optional feilds -->
+                           <xs:element name="GalleryPicture" type="xs:boolean"></xs:element> <!-- Optional feilds -->
+                           <xs:element name="ItemPictures" type="xs:boolean"></xs:element> <!-- Optional feilds -->
+                           <xs:element name="CategoriesAndAttributes" type="xs:boolean"></xs:element> <!-- Optional feilds -->
+                           <xs:element name="Description" type="xs:boolean"></xs:element> <!-- Optional feilds -->
+                           <xs:element name="RepushTime" type="xs:string"></xs:element>
+			 <xs:element name="RevisePrice" type="xs:string"></xs:element>
+			<xs:element name="ReviseQuantity" type="xs:int"></xs:element>
+                     </xs:sequence>
+                     <xs:attribute name="TimeStamp" type="xs:string"></xs:attribute> <!-- Compulsary Element -->
+               </xs:complexType>
+         </xs:element>
+   </xs:schema>
+

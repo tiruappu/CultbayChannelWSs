@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+          <!-- XML Schema Generated from XML Document on Mon Jan 02 2017 12:37:01 GMT+0530 (IST) -->
+          <!-- with XmlGrid.net Free Online Service http://xmlgrid.net -->
+       <xs:element name="ObjectConfigurationRS">
+              <xs:complexType>
+                     <xs:sequence>
+                            <xs:element name="Ack" type="xs:string"></xs:element>
+                            <xs:element name="Errors" type="ErrorsType" minOccurs="0" maxOccurs="1">
+                               </xs:element>
+                        </xs:sequence>
+                     <xs:attribute name="TimeStamp" type="xs:string"></xs:attribute>
+                 </xs:complexType>
+          </xs:element>
+   </xs:schema>
+
+

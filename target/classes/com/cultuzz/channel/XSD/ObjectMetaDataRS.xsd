@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+       <xs:element name="ObjectMetaDataRS">
+              <xs:complexType>
+                     <xs:choice>
+                            <xs:element name="Ack" type="xs:string"></xs:element>
+			    <xs:element name="ObjectId" type="xs:int"></xs:element>
+			    <xs:element name="SellerAccounts">
+                                   <xs:complexType>
+                                          <xs:sequence>
+                                                 <xs:element name="SellerAccount" minOccurs="0" maxOccurs="unbounded">
+                                                        <xs:complexType>
+                                                               <xs:sequence>
+								      <xs:element name="sellerId" type="xs:long"></xs:element>
+								      <xs:element name="SellerName" type="xs:string"></xs:element>
+                                                                      <xs:element name="PayeeAccount" type="xs:string"></xs:element>
+								      <xs:element name="ShopAccount" type="xs:int"></xs:element>
+																													
+								</xs:sequence>
+						
+                                                          </xs:complexType>
+                                                    </xs:element>
+                                             </xs:sequence>
+                                      </xs:complexType>
+                               </xs:element>
+			         <xs:element name="Products">
+                                   <xs:complexType>
+                                          <xs:sequence>
+                                                 <xs:element name="Product" minOccurs="0" maxOccurs="unbounded">
+                                                        <xs:complexType>
+                                                               <xs:sequence>
+								      <xs:element name="Id" type="xs:long"></xs:element>
+                                                                      <xs:element name="Name" type="xs:string"></xs:element>
+							        <xs:element name="price" type="xs:double"></xs:element>	
+					<xs:element name="NoOfNights" type="xs:int"></xs:element>
+					<xs:element name="NoOfPersons" type="xs:int"></xs:element>
+							<xs:element name="validities">
+							<xs:complexType>
+								<xs:sequence>
+								   <xs:element name="validity" type="xs:string" minOccurs="0" maxOccurs="unbounded"></xs:element>
+				</xs:sequence>
+				 </xs:complexType></xs:element>
+								</xs:sequence>
+						
+                                                          </xs:complexType>
+                                                    </xs:element>
+                                             </xs:sequence>
+                                      </xs:complexType>
+                               </xs:element>
+				  <xs:element name="Categories">
+                                   <xs:complexType>
+                                          <xs:sequence>
+                                                 <xs:element name="Category" minOccurs="0" maxOccurs="unbounded">
+                                                        <xs:complexType>
+                                                               <xs:sequence>
+								      <xs:element name="Id" type="xs:long"></xs:element>
+                                                                      <xs:element name="Name" type="xs:string"></xs:element>
+								</xs:sequence>
+						
+                                                          </xs:complexType>
+                                                    </xs:element>
+                                             </xs:sequence>
+                                      </xs:complexType>
+                               </xs:element>
+				  <xs:element name="ShopCategories">
+                                   <xs:complexType>
+                                          <xs:sequence>
+                                                 <xs:element name="ShopCategory" minOccurs="0" maxOccurs="unbounded">
+                                                        <xs:complexType>
+                                                               <xs:sequence>
+								      <xs:element name="Id" type="xs:long"></xs:element>
+                                                                      <xs:element name="Name" type="xs:string"></xs:element>
+								      <xs:element name="ParentCategoryId" type="xs:long"></xs:element>
+								</xs:sequence>
+						
+                                                          </xs:complexType>
+                                                    </xs:element>
+                                             </xs:sequence>
+                                      </xs:complexType>
+                               </xs:element>
+				  <xs:element name="PictureCategories">
+                                   <xs:complexType>
+                                          <xs:sequence>
+                                                 <xs:element name="PictureCategory" type="xs:string" minOccurs="0" maxOccurs="unbounded"></xs:element>
+					 </xs:sequence>
+					<xs:attribute name="Id" type="xs:int"></xs:attribute>
+                                      </xs:complexType>
+                   </xs:element>
+				 <xs:element name="Errors" type="ErrorsType" minOccurs="0" maxOccurs="1"></xs:element>
+                        </xs:choice>
+                     <xs:attribute name="TimeStamp" type="xs:string"></xs:attribute>
+                 </xs:complexType>
+          </xs:element>
+   </xs:schema>

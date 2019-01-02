@@ -1,0 +1,293 @@
+<?xml version="1.0"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:jaxb="http://java.sun.com/xml/ns/jaxb" xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc"
+	jaxb:extensionBindingPrefixes="xjc" jaxb:version="2.0"
+	elementFormDefault="qualified">
+	<xs:include schemaLocation="SimpleTypes.xsd" />
+<xs:complexType name="ErrorsType">
+		<xs:sequence>
+                                                 <xs:element name="Error" type="ErrorType" minOccurs="1" maxOccurs="unbounded"></xs:element>
+                                     </xs:sequence>
+		<xs:attribute name="Lang" type="xs:string"></xs:attribute>
+			</xs:complexType>
+<xs:complexType name="ErrorType">
+		<xs:sequence>
+			<xs:element name="ErrorCode" type="xs:int" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="ErrorMessage" type="xs:string" minOccurs="1" maxOccurs="1"></xs:element>
+                </xs:sequence>
+	</xs:complexType>
+<xs:complexType name="CategoriesType">
+		<xs:sequence>
+                                                 <xs:element name="PrimaryCategoryDetails" type="PrimaryCategoryDetailsType" minOccurs="0" maxOccurs="1"></xs:element>
+                                                 <xs:element name="SecondaryCategoryDetails" type="SecondaryCategoryDetailsType" minOccurs="0" maxOccurs="1"></xs:element>
+                                             </xs:sequence>
+
+	</xs:complexType>
+
+<xs:complexType name="PrimaryCategoryDetailsType">
+			<xs:sequence>
+                                                                     <xs:element name="PrimaryCategoryId" type="xs:string" minOccurs="0"  maxOccurs="1"></xs:element>
+								     <xs:element name="PrimaryCategoryName" type="xs:string" minOccurs="0" maxOccurs="1"></xs:element>
+                                                                      <xs:element name="PrimaryItemSpecifics" type="PrimaryItemSpecificsType"  minOccurs="0"  maxOccurs="1"></xs:element>
+                                                                  </xs:sequence>
+	</xs:complexType>
+
+<xs:complexType name="PrimaryItemSpecificsType">
+			<xs:sequence>
+                                                                     <xs:element name="NameValueList" type="NameValueListType" minOccurs="0"  maxOccurs="unbounded"></xs:element>
+                                                                     
+                                                                  </xs:sequence>
+	</xs:complexType>
+
+
+
+<xs:complexType name="SecondaryCategoryDetailsType">
+			<xs:sequence>
+                                                                     <xs:element name="SecondaryCategoryId" type="xs:string" minOccurs="0"  maxOccurs="1"></xs:element>
+									<xs:element name="SecondaryCategoryName" type="xs:string" minOccurs="0" maxOccurs="1"></xs:element>
+                                                                      <xs:element name="SecondaryItemSpecifics" type="SecondaryItemSpecificsType"  minOccurs="0"  maxOccurs="1"></xs:element>
+                                                                  </xs:sequence>
+	</xs:complexType>
+
+<xs:complexType name="SecondaryItemSpecificsType">
+			<xs:sequence>
+                                                                     <xs:element name="NameValueList" type="NameValueListType" minOccurs="0"  maxOccurs="unbounded"></xs:element>
+                                                                     
+                                                                  </xs:sequence>
+	</xs:complexType>
+
+
+
+
+<xs:complexType name="StoreCategoriesType">
+		<xs:sequence>
+                                                 <xs:element name="StoreCategoryId" type="xs:string" minOccurs="0" maxOccurs="1"></xs:element>
+                                                 <xs:element name="StoreCategory2Id" type="xs:string" minOccurs="0" maxOccurs="1"></xs:element>
+                                             </xs:sequence>
+
+	</xs:complexType>
+
+<xs:complexType name="NameValueListType">
+			<xs:sequence>
+                                                                      <xs:element name="Name" type="xs:string" minOccurs="0" maxOccurs="1"></xs:element>
+                                                                      <xs:element name="Value" type="xs:string" minOccurs="0"  maxOccurs="unbounded"></xs:element>
+									<xs:element name="SValue" type="xs:string" minOccurs="0"  maxOccurs="1"></xs:element>
+                                                                  </xs:sequence>
+	</xs:complexType>
+		
+<xs:complexType name="AmenitiesType">
+			<xs:sequence>
+                                                                      <xs:element name="AmenityId" type="xs:string" minOccurs="0" maxOccurs="unbounded"></xs:element>
+                                                                  </xs:sequence>
+	</xs:complexType>
+		<xs:complexType name="PropertiesType">
+		<xs:sequence>
+                                                 <xs:element name="Nights" type="xs:string"  minOccurs="0"  maxOccurs="1"></xs:element>
+                                                 <xs:element name="Persons" type="xs:string"  minOccurs="0"  maxOccurs="1"></xs:element>
+                                                 <xs:element name="CateringType" type="xs:string"  minOccurs="0"  maxOccurs="1"></xs:element>
+                                                 <xs:element name="TypeOfRoom" type="xs:string"  minOccurs="0"  maxOccurs="1"></xs:element>
+                                             </xs:sequence>
+	</xs:complexType>
+				<xs:complexType name="PictureDetailsType">
+		<xs:sequence>
+                                                 <xs:element name="GalleryURL" type="xs:string"  minOccurs="0"  maxOccurs="1"></xs:element>
+                                                 <xs:element name="PictureURL" type="xs:string" minOccurs="0" maxOccurs="unbounded" ></xs:element>
+						
+					    </xs:sequence>
+	</xs:complexType>
+<xs:complexType name="AdditionalOptionsType">
+		<xs:sequence>
+                                                 <xs:element name="OptionValue" type="xs:string" minOccurs="0" maxOccurs="unbounded"></xs:element>
+                                             </xs:sequence>
+	</xs:complexType>
+		<xs:complexType name="DescriptionType">
+		<xs:sequence>
+                                                 <xs:element name="Title" type="xs:string" minOccurs="0" ></xs:element>
+                                                 <xs:element name="SubTitle" type="xs:string" minOccurs="0"></xs:element>
+                                                 <xs:element name="OfferText" type="xs:string" minOccurs="0"></xs:element>
+                                                 <xs:element name="OfferAdditionalText" type="xs:string" minOccurs="0"></xs:element>
+                                                 <xs:element name="VoucherText" type="xs:string" minOccurs="0"></xs:element>
+                                                 <xs:element name="VoucherValidityText" type="xs:string" minOccurs="0"></xs:element>
+                                             </xs:sequence>
+	</xs:complexType>
+		<xs:complexType name="DescriptionPicturesType">
+<xs:sequence>
+                                                 <xs:element name="DescriptionPictureURL" type="xs:string" minOccurs="0"  maxOccurs="unbounded"></xs:element>
+                                                 <xs:element name="OfferSliderPictureURL" type="xs:string" minOccurs="0"  maxOccurs="unbounded" ></xs:element>
+                                                 
+						</xs:sequence>
+	</xs:complexType>
+
+		<xs:complexType name="RemoveFieldsType">
+		<xs:sequence>
+			 <xs:element name="RemoveField" type="xs:string" minOccurs="0" maxOccurs="unbounded"></xs:element>
+		</xs:sequence>
+		</xs:complexType>
+
+<xs:complexType name="TransactionsType">
+		<xs:sequence>
+                                    <xs:element name="Transaction" type="TransactionType" minOccurs="0" maxOccurs="unbounded"></xs:element>
+                                             </xs:sequence>
+	</xs:complexType>
+
+<xs:complexType name="TransactionType">
+		
+                                    <xs:sequence>
+								<xs:element name="BuyerId" type="xs:string"></xs:element>
+								<xs:element name="BuyerName" type="xs:string"></xs:element>
+								<xs:element name="QuantityPurchased" type="xs:int" minOccurs="0" maxOccurs="1" default="0"></xs:element>
+								<xs:element name="TotalPrice" type="xs:string" minOccurs="0"  maxOccurs="1" default="null"></xs:element> 
+
+						<xs:element name="Currency" type="xs:string"></xs:element>	
+						<xs:element name="TransactionDate" type="xs:string"></xs:element>
+							 </xs:sequence>
+                
+	</xs:complexType>
+
+
+	<xs:simpleType name="StatusType">
+		<xs:restriction base="xs:int">
+			<xs:enumeration value="0" />
+			<xs:enumeration value="1" />
+			<xs:enumeration value="2" />
+		</xs:restriction>
+	</xs:simpleType>
+
+		<xs:complexType name="VoucherType">
+                  <xs:sequence>
+                     <xs:element name="VoucherPdfTemplateId" type="xs:int" minOccurs="1" maxOccurs="1" />
+                     <xs:element name="VoucherPictureURL" type="xs:string" minOccurs="1" maxOccurs="1" />
+                     <xs:element name="VoucherLogoPictureURL" type="xs:string" minOccurs="1" maxOccurs="1" />
+                  </xs:sequence>
+               </xs:complexType>
+
+		<xs:complexType name="SettingsType">
+                  <xs:sequence>
+                     <xs:element name="Setting" type="SettingType" minOccurs="0" maxOccurs="unbounded"></xs:element>
+                  </xs:sequence>
+               </xs:complexType>
+
+		<xs:complexType name="SettingType">
+                           <xs:sequence>
+                              <xs:element name="Name" type="xs:string" minOccurs="1" maxOccurs="1" />
+                              <xs:element name="Key" type="xs:string" minOccurs="1" maxOccurs="1" />
+                           </xs:sequence>
+                        </xs:complexType>
+
+		 <xs:complexType name="objsliderpics">
+                  <xs:sequence>
+                     <xs:element name="ObjectSliderPictureURL" type="xs:string" minOccurs="1" maxOccurs="unbounded" />
+                  </xs:sequence>
+               </xs:complexType>
+
+		<xs:complexType name="MapType">
+                  <xs:sequence>
+                     <xs:element name="Longitude" type="xs:string" minOccurs="1" maxOccurs="1" />
+                     <xs:element name="Latitude" type="xs:string" minOccurs="1" maxOccurs="1" />
+		     <xs:element name="ZoomLevel" type="xs:int" minOccurs="1" maxOccurs="1" />
+                  </xs:sequence>
+               </xs:complexType>
+
+
+		<xs:complexType name="PaymentOptionsType">
+                  <xs:sequence>
+                     <xs:element name="PaymentOption" type="PaymentOptionType" minOccurs="0" maxOccurs="unbounded"></xs:element>
+                  </xs:sequence>
+		  <xs:attribute name="paymentToHotelier" type="xs:string"/>
+               </xs:complexType>
+
+		<xs:complexType name="PaymentOptionType">
+                           <xs:sequence>
+                              <xs:element name="PaymentType" type="xs:string" minOccurs="1" maxOccurs="1" />
+                              <xs:element name="PaymentId" type="xs:string" minOccurs="1" maxOccurs="1" />
+                              <xs:element name="MarketPlace" type="xs:string" minOccurs="1" maxOccurs="1" />
+                           </xs:sequence>
+				<xs:attribute name="changePaymentId" type="xs:string"/>
+                        </xs:complexType>
+
+
+		<xs:complexType name="FAQType">
+                           <xs:sequence>
+                              <xs:element name="Value" type="ValueType" minOccurs="1" maxOccurs="unbounded"></xs:element>
+                           </xs:sequence>
+                        </xs:complexType>
+
+				<xs:complexType name="ValueType">
+                                    <xs:simpleContent>
+				          <xs:extension base="xs:string">					
+                                    	  <xs:attribute name="name" type="xs:string" />
+                                          <xs:attribute name="language" type="xs:string" />
+					  </xs:extension>
+				     </xs:simpleContent>
+                                 </xs:complexType>
+
+			
+			<xs:complexType name="AdditionalType">
+                           <xs:sequence>
+                              <xs:element name="Value" type="ValueType" minOccurs="1" maxOccurs="unbounded"></xs:element>
+                           </xs:sequence>
+                        </xs:complexType>
+
+			<xs:complexType name="TermsAndConditionsType">
+                           <xs:sequence>
+                              <xs:element name="StandardBusinessTerms" minOccurs="0" maxOccurs="unbounded">
+				<xs:complexType>
+                                    <xs:simpleContent>
+				    <xs:extension base="xs:string">
+                                    <xs:attribute name="language" type="xs:string" />
+				          </xs:extension>
+					</xs:simpleContent>
+                                 </xs:complexType>				
+				</xs:element>
+                              <xs:element name="CheckoutService" minOccurs="0" maxOccurs="unbounded">
+				<xs:complexType>
+                                    <xs:simpleContent>
+				    <xs:extension base="xs:string">
+                                    <xs:attribute name="language" type="xs:string" />
+				          </xs:extension>
+					</xs:simpleContent>
+                                 </xs:complexType>
+				</xs:element>
+                              <xs:element name="PaymentService" minOccurs="0" maxOccurs="unbounded">
+				<xs:complexType>
+                                    <xs:simpleContent>
+				    <xs:extension base="xs:string">
+                                    <xs:attribute name="language" type="xs:string" />
+				          </xs:extension>
+					</xs:simpleContent>
+                                 </xs:complexType>
+				</xs:element>
+                              <xs:element name="VoucherService" minOccurs="0" maxOccurs="unbounded">
+				<xs:complexType>
+                                    <xs:simpleContent>
+				    <xs:extension base="xs:string">
+                                    <xs:attribute name="language" type="xs:string" />
+				          </xs:extension>
+					</xs:simpleContent>
+                                 </xs:complexType>
+				</xs:element>
+                              <xs:element name="AdditionalValues" type="AdditionalType" minOccurs="0" maxOccurs="1"></xs:element>
+                           </xs:sequence>
+                        </xs:complexType>
+
+		<xs:complexType name="InformationsTypes">
+                  <xs:sequence>
+                     <xs:element name="FAQ" type="FAQType" minOccurs="0" maxOccurs="1"></xs:element>
+                     <xs:element name="TermsAndConditions" type="TermsAndConditionsType" minOccurs="0" maxOccurs="1"></xs:element>
+                  </xs:sequence>
+               </xs:complexType>
+	       <xs:complexType name="AddressType">
+                  <xs:sequence>
+                     <xs:element name="Street" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                     <xs:element name="StreetNumber" type="xs:string" minOccurs="0" maxOccurs="1" />
+		     <xs:element name="SecondStreet" type="xs:string" minOccurs="0" maxOccurs="1" />
+		     <xs:element name="PostalCode" type="xs:string" minOccurs="0" maxOccurs="1" />
+		     <xs:element name="City" type="xs:string" minOccurs="0" maxOccurs="1" />
+		     <xs:element name="Country" type="xs:string" minOccurs="0" maxOccurs="1" />
+		      <xs:element name="CountryCode" type="xs:string" minOccurs="0" maxOccurs="1" />
+		     <xs:element name="Region" type="xs:string" minOccurs="0" maxOccurs="1" />
+		  </xs:sequence>
+               </xs:complexType>
+   </xs:schema>
+
+

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+          <!-- XML Schema Generated from XML Document on Fri Nov 11 2016 10:44:38 GMT+0530 (IST) -->
+          <!-- with XmlGrid.net Free Online Service http://xmlgrid.net -->
+	<xs:include schemaLocation="CommonTypes.xsd" />       
+	<xs:element name="GetHotelDataRQ">
+              <xs:complexType>
+                     <xs:sequence>
+			     <xs:element name="AuthenticationCode" type="xs:string"></xs:element>
+                            <xs:element name="SourceId" type="xs:int"></xs:element>
+                            <xs:element name="ChannelId" type="xs:int"></xs:element>
+                            <xs:element name="HotelId" type="xs:long" minOccurs="1"  maxOccurs="1"></xs:element>
+			    <xs:element name="Filter" type="xs:string" minOccurs="1"  maxOccurs="1"></xs:element>
+			   <xs:element name="ErrorLang" type="xs:string"></xs:element>
+                        </xs:sequence>
+                     <xs:attribute name="TimeStamp" type="xs:string"></xs:attribute>
+                 </xs:complexType>
+          </xs:element>
+   </xs:schema>

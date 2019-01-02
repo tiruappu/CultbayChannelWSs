@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+       <xs:element name="SetHotelDataRQ">
+              <xs:complexType>
+                     <xs:choice>
+                   <xs:element name="AuthenticationCode" type="xs:string"></xs:element>
+                  <xs:element name="SourceId" type="xs:int"></xs:element>
+                  <xs:element name="ChannelId" type="xs:int"></xs:element>
+		  <xs:element name="ErrorLang" type="xs:string"></xs:element>
+		   <xs:element name="HotelId" type="xs:long" minOccurs="0" maxOccurs="1" />
+			    <xs:element name="HotelDetails">
+                                   <xs:complexType>
+                                          <xs:sequence>
+                    <xs:element name="Name" type="xs:string" minOccurs="0" maxOccurs="1" />
+		     <xs:element name="Address" type="AddressType" minOccurs="0" maxOccurs="1" />
+		     <xs:element name="PhoneNumber" type="xs:string" minOccurs="0" maxOccurs="1" />
+		     <xs:element name="FaxNumber" type="xs:string" minOccurs="0" maxOccurs="1" />
+		     <xs:element name="Email" type="xs:string" minOccurs="0" maxOccurs="1" />
+		     <xs:element name="AlternateEmail" type="xs:string" minOccurs="0" maxOccurs="1" />
+		     <xs:element name="Latitude" type="xs:string" minOccurs="0" maxOccurs="1" />
+		     <xs:element name="Longitude" type="xs:string" minOccurs="0" maxOccurs="1" />
+		     <xs:element name="ZoomLevel" type="xs:string" minOccurs="0" maxOccurs="1" />
+		     <xs:element name="Language" type="xs:string" minOccurs="0" maxOccurs="1" />
+		     <xs:element name="Currency" type="xs:string" minOccurs="0" maxOccurs="1" />
+		     <xs:element name="BillingStatus" type="xs:boolean" minOccurs="0" maxOccurs="1" />
+		     <xs:element name="Website" type="xs:string" minOccurs="0" maxOccurs="1" />
+		     <xs:element name="RegistrationDate" type="xs:string" minOccurs="0" maxOccurs="1" />
+		     <xs:element name="ActivationDate" type="xs:string" minOccurs="0" maxOccurs="1" />
+		     <xs:element name="UserName" type="xs:string" minOccurs="0" maxOccurs="1" />
+                                             </xs:sequence>
+                                      </xs:complexType>
+                               </xs:element>
+			         <xs:element name="BillingAddress">
+                                   <xs:complexType>
+                                          <xs:sequence>
+                     <xs:element name="InvoiceRecipient" type="xs:string" minOccurs="0" maxOccurs="1" />
+		     <xs:element name="Email" type="xs:string" minOccurs="0" maxOccurs="1" />
+		     <xs:element name="Address" type="AddressType" minOccurs="0" maxOccurs="1" />
+		     <xs:element name="InvoiceLanguage" type="xs:string" minOccurs="0" maxOccurs="1" />
+		     <xs:element name="UserName" type="xs:string" minOccurs="0" maxOccurs="1" /> 
+                                             </xs:sequence>
+                                      </xs:complexType>
+                               </xs:element>
+				  <xs:element name="LegalAddress">
+                                   <xs:complexType>
+                                          <xs:sequence>
+                     <xs:element name="LegalName" type="xs:string" minOccurs="0" maxOccurs="1" />
+		      <xs:element name="CompanyName" type="xs:string" minOccurs="0" maxOccurs="1" />
+		      <xs:element name="Email" type="xs:string" minOccurs="0" maxOccurs="1" />
+		     <xs:element name="Address" type="AddressType" minOccurs="0" maxOccurs="1" />
+		     <xs:element name="VATNumber" type="xs:string" minOccurs="0" maxOccurs="1" />
+		     <xs:element name="LegalRepresentative" type="xs:string" minOccurs="0" maxOccurs="1" />
+	             <xs:element name="RegisterNumber" type="xs:string" minOccurs="0" maxOccurs="1" />
+		     <xs:element name="UserName" type="xs:string" minOccurs="0" maxOccurs="1" />
+		                      </xs:sequence>
+                                      </xs:complexType>
+                               </xs:element>
+		     <xs:element name="Descriptions">
+                        <xs:complexType>
+                          <xs:sequence>
+                            <xs:element name="Description" minOccurs="0" maxOccurs="unbounded">
+                               <xs:complexType>
+                                 <xs:sequence>
+				   <xs:element name="text" type="xs:string"></xs:element>
+			 	   <xs:element name="Language" type="xs:string" minOccurs="0" maxOccurs="1" />
+				   <xs:element name="UserName" type="xs:string" minOccurs="0" maxOccurs="1" />
+                                 </xs:sequence>
+				</xs:complexType>
+                              </xs:element>
+                          </xs:sequence>
+                         </xs:complexType>
+                    </xs:element>
+			</xs:choice>
+                     <xs:attribute name="TimeStamp" type="xs:string"></xs:attribute>
+                 </xs:complexType>
+          </xs:element>
+   </xs:schema>

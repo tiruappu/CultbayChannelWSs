@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+   <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+         <!-- XML Schema Generated from XML Document on Wed Jan 04 2017 15:20:44 GMT+0530 (IST) -->
+         <!-- with XmlGrid.net Free Online Service http://xmlgrid.net -->
+         <xs:element name="ListOfMemberMessagesRQ">
+               <xs:complexType>
+                     <xs:sequence>
+                           <xs:element name="AuthenticationCode" type="xs:string" minOccurs="1" maxOccurs="1"></xs:element>
+                           <xs:element name="SourceId" type="xs:int" minOccurs="1" maxOccurs="1"></xs:element>
+                           <xs:element name="ChannelId" type="xs:int" minOccurs="1" maxOccurs="1"></xs:element>
+                           <xs:element name="ObjectId" type="xs:int" minOccurs="1" maxOccurs="1"></xs:element>
+		<xs:element name="ErrorLang" type="xs:string"></xs:element>
+                           <xs:element name="ItemId" type="xs:string" minOccurs="0" maxOccurs="1"></xs:element>
+			   <xs:element name="Status" type="xs:string" minOccurs="0" maxOccurs="1"></xs:element>
+                           <xs:element name="Period" minOccurs="0" maxOccurs="1">
+                                 <xs:complexType>
+                                       <xs:attribute name="From" type="xs:string"></xs:attribute>
+                                       <xs:attribute name="To" type="xs:string"></xs:attribute>
+                                 </xs:complexType>
+                           </xs:element>
+                           <xs:element name="Range" minOccurs="1" maxOccurs="1">
+                                 <xs:complexType>
+                                       <xs:attribute name="lowerLimit" type="xs:string"></xs:attribute>
+                                       <xs:attribute name="upperLimit" type="xs:string"></xs:attribute>
+                                 </xs:complexType>
+                           </xs:element>
+                     </xs:sequence>
+                     <xs:attribute name="TimeStamp" type="xs:string"></xs:attribute>
+               </xs:complexType>
+         </xs:element>
+   </xs:schema>
+

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+          <!-- XML Schema Generated from XML Document on Thu Nov 17 2016 18:07:13 GMT+0530 (IST) -->
+          <!-- with XmlGrid.net Free Online Service http://xmlgrid.net -->
+	<xs:include schemaLocation="CommonTypes.xsd" />
+       <xs:element name="TemplateDetailsRS">
+              <xs:complexType>
+                     <xs:sequence>
+                            <xs:element name="Ack" type="xs:string"></xs:element>
+                            <xs:element name="DesignTemplate" type="xs:int" minOccurs="0"  maxOccurs="1" default="null"></xs:element>
+			    <xs:element name="SiteId" type="xs:int" minOccurs="0"  maxOccurs="1" default="null"></xs:element>
+			     <xs:element name="ShopObjectId" type="xs:string" minOccurs="0" maxOccurs="1"></xs:element>
+                            <xs:element name="TemplateName" type="xs:string"></xs:element>
+			   
+                            <xs:element name="ProductId" type="xs:int" minOccurs="0"  maxOccurs="1" default="null"></xs:element>
+ 			<xs:element name="Categories" type="CategoriesType" minOccurs="0" maxOccurs="1"></xs:element>                   
+                            <xs:element name="StoreCategories" type="StoreCategoriesType" minOccurs="0" maxOccurs="1"></xs:element>
+                            <xs:element name="OfferTitle" type="xs:string"></xs:element>
+                            <xs:element name="OfferSubTitle" type="xs:string"></xs:element>
+                            <xs:element name="Price" type="xs:string" minOccurs="0"  maxOccurs="1" default="null"></xs:element>
+			     <xs:element name="RetailPrice" type="xs:string" minOccurs="0" maxOccurs="1"></xs:element> 
+                           <xs:element name="Currency" type="xs:string"></xs:element>
+			   <xs:element name="ListingType" type="xs:string" minOccurs="0" maxOccurs="1"></xs:element>
+			   <xs:element name="SellerAccount" type="xs:string" minOccurs="0" maxOccurs="1"></xs:element>
+			 <xs:element name="SellerObject" type="xs:int" minOccurs="0" maxOccurs="1"></xs:element>
+			<xs:element name="PayeeAccount" type="xs:string" minOccurs="0" maxOccurs="1"></xs:element>
+		        
+                             <xs:element name="Amenities" type="AmenitiesType" minOccurs="0" maxOccurs="1"></xs:element>
+                           <xs:element name="Properties" type="PropertiesType" minOccurs="0"  maxOccurs="1"></xs:element>
+                            <xs:element name="PictureDetails" type="PictureDetailsType"></xs:element>
+                             <xs:element name="AdditionalOptions" type="AdditionalOptionsType" minOccurs="0" maxOccurs="1"></xs:element>
+                            <xs:element name="Description" type="DescriptionType" minOccurs="1" maxOccurs="1"></xs:element>
+                           <xs:element name="DescriptionPictures" type="DescriptionPicturesType"> </xs:element>
+                            <xs:element name="VoucherValidity" type="xs:int" minOccurs="0"  maxOccurs="1" default="null"></xs:element>
+			    
+                            <xs:element name="Errors" type="ErrorsType" minOccurs="0" maxOccurs="1"></xs:element>
+                        </xs:sequence>
+                     <xs:attribute name="TimeStamp" type="xs:string"></xs:attribute>
+                 </xs:complexType>
+          </xs:element>
+   </xs:schema>
+
+

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+   <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="CommonTypes.xsd" />
+         <xs:element name="DeletePictureRQ">
+               <xs:complexType>
+                     <xs:sequence>
+                           <xs:element name="AuthenticationCode" type="xs:string" minOccurs="1" maxOccurs="1"></xs:element>
+                           <xs:element name="SourceId" type="xs:int" minOccurs="1" maxOccurs="1"></xs:element>
+                           <xs:element name="ChannelId" type="xs:int" minOccurs="1" maxOccurs="1"></xs:element>
+                           <xs:element name="ObjectId" type="xs:int" minOccurs="1" maxOccurs="1"></xs:element>
+                           <xs:element name="ErrorLang" type="xs:string"></xs:element>
+			   <xs:element name="ImageId" type="xs:int" minOccurs="1" maxOccurs="1"/>
+                     </xs:sequence>
+                     <xs:attribute name="TimeStamp" type="xs:string"></xs:attribute>
+               </xs:complexType>
+         </xs:element>
+   </xs:schema>
+

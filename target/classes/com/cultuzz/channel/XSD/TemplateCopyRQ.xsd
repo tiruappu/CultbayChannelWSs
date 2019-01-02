@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+          <!-- XML Schema Generated from XML Document on Thu Nov 17 2016 18:05:04 GMT+0530 (IST) -->
+          <!-- with XmlGrid.net Free Online Service http://xmlgrid.net -->
+       <xs:element name="TemplateCopyRQ">
+	 <xs:complexType>
+	<xs:sequence>
+		 <xs:element name="AuthenticationCode" type="xs:string"></xs:element>
+                            <xs:element name="SourceId" type="xs:int"></xs:element>
+                            <xs:element name="ChannelId" type="xs:int"></xs:element>
+                            <xs:element name="ObjectId" type="xs:int"></xs:element>
+			    <xs:element name="ErrorLang" type="xs:string"></xs:element>
+                            <xs:element name="TemplateId" type="xs:int" default="null"></xs:element>
+                        </xs:sequence>
+                     <xs:attribute name="TimeStamp" type="xs:string"></xs:attribute>
+                 </xs:complexType>
+          </xs:element>
+   </xs:schema>

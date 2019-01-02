@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+   <!-- XML Schema Generated from XML Document on Fri Nov 11 2016 11:28:04 GMT+0530 (IST) -->
+   <!-- with XmlGrid.net Free Online Service http://xmlgrid.net -->
+   <xs:element name="ObjectConfigurationDetailsRS">
+      <xs:complexType>
+         <xs:sequence>
+	    <xs:element name="Ack" type="xs:string" minOccurs="1" maxOccurs="1"></xs:element>
+            <xs:element name="ObjectId" type="xs:int" minOccurs="1" maxOccurs="1" />
+            <xs:element name="Voucher" type="VoucherType" minOccurs="0" maxOccurs="1"></xs:element>
+            <xs:element name="Settings" type="SettingsType" minOccurs="0" maxOccurs="1"></xs:element>
+            <xs:element name="LogoPictureURL" type="xs:string" minOccurs="1" maxOccurs="1" />
+            <xs:element name="ObjectSlider" type="objsliderpics"></xs:element>
+            <xs:element name="Map" type="MapType"></xs:element>
+            <xs:element name="PaymentOptions" type="PaymentOptionsType"></xs:element>
+            <xs:element name="InformationTypes" type="InformationsTypes"></xs:element>
+	    <xs:element name="Errors" type="ErrorsType" minOccurs="0" maxOccurs="1"></xs:element>
+         </xs:sequence>
+         <xs:attribute name="TimeStamp" type="xs:string" />
+      </xs:complexType>
+   </xs:element>
+</xs:schema>
+
+
+
+
+
+

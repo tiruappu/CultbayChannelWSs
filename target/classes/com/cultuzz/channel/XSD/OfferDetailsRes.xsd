@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+        <xs:include schemaLocation="CommonTypes.xsd" />
+	<xs:include schemaLocation="SimpleTypes.xsd" />
+       <xs:element name="OfferDetailsRS" >
+              <xs:complexType>
+                     <xs:sequence>
+                            <xs:element name="Ack" type="xs:string"></xs:element>
+                            <xs:element name="Id" type="xs:int" minOccurs = "0" maxOccurs = "1" default="null"></xs:element>
+			    <xs:element name="ObjectId" type="xs:int" minOccurs="0"  maxOccurs="1" default="null"></xs:element>
+			    <xs:element name="TemplateId" type="xs:int" minOccurs="0"  maxOccurs="1" default="null"></xs:element>
+		            <xs:element name="ItemId" type="xs:string" minOccurs="0" maxOccurs="1" default="null"></xs:element>
+                            <xs:element name="Title" type="xs:string"></xs:element>
+                            <xs:element name="SubTitle" type="xs:string" minOccurs="0" maxOccurs="1"></xs:element>
+                            <xs:element name="StartTime" type="xs:string"></xs:element>
+                            <xs:element name="EndTime" type="xs:string" minOccurs="0" maxOccurs="1"></xs:element>
+                            <xs:element name="Duration" type="xs:int" minOccurs="0"  maxOccurs="1" default="null"></xs:element>
+                            <xs:element name="Quantity" type="xs:int" minOccurs="0"  maxOccurs="1" default="null"></xs:element>
+			    <xs:element name="ProductId" type="xs:int" minOccurs="0"  maxOccurs="1" default="null"></xs:element>
+			    <xs:element name="ProductName" type="xs:string" minOccurs="0"  maxOccurs="1" default="null"></xs:element>
+			    <xs:element name="PayeeAccount" type="xs:string" minOccurs="0"  maxOccurs="1" default="null"></xs:element>
+                            <xs:element name="Price" type="xs:string" minOccurs="0"  maxOccurs="1" default="null"></xs:element>
+			    <xs:element name="RetailPrice" type="xs:string" minOccurs="0" maxOccurs="1"></xs:element> 
+                            <xs:element name="Currency" type="xs:string"></xs:element>
+                            <xs:element name="SiteId" type="xs:int" minOccurs="0"  maxOccurs="1" default="null"></xs:element>
+			<xs:element name="Status" type="xs:int" minOccurs="0"  maxOccurs="1" default="null"></xs:element>
+			    <xs:element name="Transactions" type="TransactionsType"  minOccurs="0" maxOccurs="1"></xs:element>
+                            <xs:element name="ListingType" type="xs:string"></xs:element>
+                            <xs:element name="Description" type="xs:string" minOccurs="0" maxOccurs="1"></xs:element>
+                            <xs:element name="QuantitySold" type="xs:int" minOccurs="0" maxOccurs="1" default="null"></xs:element>
+                            <xs:element name="NoOfViews" type="xs:int" minOccurs="0" maxOccurs="1" default="null"></xs:element>
+			<xs:element name="NoOfBids" type="xs:int" minOccurs="0" maxOccurs="1" default="null"></xs:element>
+                            <xs:element name="HighestBid" type="xs:string" minOccurs="0" maxOccurs="1" default="null"></xs:element>
+                            <xs:element name="BidderName" type="xs:string" minOccurs="0" maxOccurs="1"></xs:element>
+			    <xs:element name="WatchCount" type="xs:string" minOccurs="0" maxOccurs="1"></xs:element>
+                            <xs:element name="Errors" type="ErrorsType" minOccurs="0" maxOccurs="1">
+                               </xs:element>
+                        </xs:sequence>
+                     <xs:attribute name="TimeStamp" type="xs:string"></xs:attribute>
+                 </xs:complexType>
+          </xs:element>
+   </xs:schema>

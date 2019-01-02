@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+   <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+         <!-- XML Schema Generated from XML Document on Wed Jan 04 2017 12:57:34 GMT+0530 (IST) -->
+         <!-- with XmlGrid.net Free Online Service http://xmlgrid.net -->
+
+         <xs:element name="MemberMessageDetailsRQ">
+               <xs:complexType>
+                     <xs:sequence>
+                           <xs:element name="AuthenticationCode" type="xs:string" minOccurs="1" maxOccurs="1"></xs:element>
+                           <xs:element name="SourceId" type="xs:int" minOccurs="1" maxOccurs="1"></xs:element>
+                           <xs:element name="ChannelId" type="xs:int" minOccurs="1" maxOccurs="1"></xs:element>
+                           <xs:element name="ObjectId" type="xs:int" minOccurs="1" maxOccurs="1"></xs:element>
+			   <xs:element name="ErrorLang" type="xs:string"></xs:element>
+                           <xs:element name="MessageId" type="xs:string" minOccurs="1" maxOccurs="1"></xs:element>
+                     </xs:sequence>
+                     <xs:attribute name="TimeStamp" type="xs:string"></xs:attribute>
+               </xs:complexType>
+         </xs:element>
+   </xs:schema>
+
